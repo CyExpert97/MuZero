@@ -19,3 +19,4 @@ class ScalingObservationWrapper(gym.ObservationWrapper):
 
     def observation(self, observation):
         return (observation - self.mean) / self.max
+        # return observation / self.max

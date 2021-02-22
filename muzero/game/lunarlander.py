@@ -1,6 +1,7 @@
 from typing import List
 
 import gym
+import numpy as np
 
 from game.game import Action, AbstractGame
 from game.gym_wrappers import ScalingObservationWrapper
@@ -12,7 +13,7 @@ class LunarLanderDiscrete(AbstractGame):
     def __init__(self, discount: float):
         super().__init__(discount)
         self.env = gym.make('LunarLander-v2')
-        self.env = ScalingObservationWrapper(self.env, low=[-2.4, -2.0, -0.42, -3.5, -2.4, -2.0, -0.42, -3.5], high=[2.4, 2.0, 0.42, 3.5, 2.4, 2.0, 0.42, 3.5])
+        self.env = ScalingObservationWrapper(self.env, low=[-1, -1, -1, -1, -1, -1, -1, -1], high=[1, 1, 1, 1, 1, 1, 1, 1])
         self.actions = list(map(lambda i: Action(i), range(self.env.action_space.n)))
         self.observations = [self.env.reset()]
         self.done = False

@@ -2,11 +2,12 @@ import math
 
 import numpy as np
 from tensorflow.python.keras import regularizers
-from tensorflow.python.keras.layers.core import Dense
+from tensorflow.python.keras.layers import Dense
 from tensorflow.python.keras.models import Sequential
 
 from game.game import Action
 from networks.network import BaseNetwork
+# from networks.ppo_networks import ActorModelBase
 
 
 class LunarLanderNetwork(BaseNetwork):

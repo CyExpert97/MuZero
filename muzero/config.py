@@ -5,7 +5,7 @@ import tensorflow as tf
 
 from game.cartpole import CartPole
 from game.lunarlander import LunarLanderDiscrete
-from game.acrobot import Acrobot
+# from game.acrobot import Acrobot
 from game.game import AbstractGame
 from networks.cartpole_network import CartPoleNetwork
 from networks.lunarlander_network import LunarLanderNetwork

@@ -3,6 +3,9 @@ from networks.shared_storage import SharedStorage
 from self_play.self_play import run_selfplay, run_eval
 from training.replay_buffer import ReplayBuffer
 from training.training import train_network
+import tensorflow as tf
+
+print(tf.executing_eagerly())
 
 
 def muzero(config: MuZeroConfig):
